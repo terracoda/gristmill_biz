@@ -1,7 +1,0 @@
-Django==1.4
-Markdown==2.1.1
-PIL==1.1.7
-django-autoslug==1.5.0
-django-taggit==0.9.3
-wsgiref==0.1.2
-yolk==0.4.3
