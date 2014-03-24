@@ -1,0 +1,268 @@
+html {
+	background: url(../img/bg_painting_with_waterfall.jpg) no-repeat left top scroll #ffcc66;
+	}
+body {
+	min-width: 1000px;
+	position: relative;
+	background: url(../img/bg_content.png) repeat-y left top scroll transparent; 
+  	height: auto;
+}
+#wrapper {
+	margin-left: 0;
+	background: url(../img/grad_top.png) repeat-x left top scroll transparent;
+	width: 100%;
+}
+
+/* == mainHeader 
+__________________________________________________*/ 
+#mainHeader { 
+	}
+#branding {
+	text-indent: -99999em;
+	}
+#branding h1 {
+	margin: 0;
+	padding: 0;
+	width: 482px;
+	height: 353px;
+	}
+#branding h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 1px;
+	}
+#branding a {
+	position: absolute;
+	z-index: 10;
+	display: block;
+	width:inherit;
+	height: inherit;
+	background: url(../img/gristmill_logo.png) no-repeat left top scroll transparent;
+	}
+#contactNav {
+	width: 100%;
+	height: 90px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background: #330000;
+	}
+#contactNav ul {
+	margin: 0;
+	position: absolute;
+	left: 460px;
+	width: 500px;
+	}
+#contactNav a {
+	margin: 0;
+	padding: 0 20px 0 20px;
+	float: left;
+	text-align: center;   
+	line-height: 90px;
+	vertical-align: middle;   
+	border-left: solid 1px #663300;
+	font-size: 20px;
+	}
+#mainNav {
+	position: absolute;
+	top: 130px;
+	left: 620px;
+	width: 300px;
+	text-align: right;
+	}
+#mainNav a {
+	display: block;
+	font-size: 24px;
+	line-height: 28px;
+	vertical-align: baseline;
+	}
+/* == Content 
+__________________________________________________*/
+
+#content {
+	padding: 0 0 40px 0;
+	width: 960px;
+	}
+#mainContent {
+	margin-left: 40px;
+	padding: 0 0 40px 0;
+	width: 500px;
+	float: left;
+	}
+#teasers li {
+	padding: 0 30px 0 0;
+	display: block;
+	float: left;
+	width: 220px;   
+	}
+#teasers img {
+   margin: 0;
+   border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px;
+	}
+/* == sidebar 
+__________________________________________________*/ 
+
+#sidebar {
+	margin: 50px 0 0 20px; /* changed */
+	padding: 0 20px 40px 30px;
+	width: 310px;
+	float: left;
+	border-left: 1px dashed #996600;
+	}
+#sidebar section {
+	margin: 10px auto 10px auto;
+	padding: 0 10px 10px 10px;
+	border-top: 1px dashed #996600;
+	}
+#sidebar section:first-child {
+	margin-top: 0;
+	border-top: 1px none;
+	}	
+#sidebar section h3 {
+	padding-top: 10px;
+	text-align: center;
+	}
+#miniGallery li {
+	margin: 0 5px 5px 5px;
+	padding: 0;
+	float: left;
+	text-align: center;
+	width: 82px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	}
+#miniGallery img {
+	margin: 0 5px 5px 5px;
+	width: 80px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	}
+#news article {
+	line-height: 1.2;
+	padding: 2px;
+}
+#news article header h4 {
+	margin: 20px 0 0 0;
+	padding: 0 0 0 50px;
+	font-family: 'MyriadWebProBold';
+	}
+#news article p {
+	padding-left: 50px;
+	}
+#news article header p.date {
+	margin-top: -32px;
+	margin-bottom: 10px;
+	padding: 0 0 0 4px;
+	width: 50px;
+	font-size: 12px;
+	line-height: 12px;
+	}
+#sidebar #testimonial {
+	padding-bottom: 40px;	
+	background: transparent url(../img/testimonial_tail.png) no-repeat bottom center;
+	}
+#testimonial blockquote, #testimonial p {
+	margin: 0 auto;
+	width: 75%;
+	color: #330000;
+	background: #999966;
+	}
+#testimonial blockquote {
+	margin-top: 20px;
+	padding: 10px 15px 0 15px;
+	} 
+#testimonial p {
+	padding: 0 15px 10px 15px;
+	}
+#testimonial blockquote {
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;  
+	-webkit-border-radius-top-left: 8px;
+	-webkit-border-radius-top-left: 8px;
+	border-top-left-radius: 8px;    
+	border-top-right-radius: 8px;
+	}
+#testimonial .citation {
+	text-align: right;
+	font-size: 80%;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;  
+	-webkit-border-radius-bottom-left: 8px;
+	-webkit-border-radius-bottom-left: 8px;
+	border-bottom-left-radius: 8px;    
+	border-bottom-right-radius: 8px;
+	}
+#giftcard a {
+	margin: 0 auto;
+	display: block;
+	width: 202px;
+}
+#giftcard img {
+	padding: 0;
+	margin: 0;
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px;
+	border-radius: 8px;    
+	}
+#socialMedia ul {
+	margin-top: 20px;
+	margin-left: 25%;
+	margin-bottom: 0;
+	padding: 0;
+	float: left;
+	}
+#socialMedia li, 
+#socialMedia a {
+	margin: 0 10px 20px 0;
+	padding: 0;
+	float: left;
+	width: 32px;
+	height: 32px;
+	}
+#socialMedia a {
+	text-indent: -999999px;
+	background: transparent no-repeat;
+	}
+#socialMedia a#facebook {
+	background-image: url(../img/facebook.png); 
+	}
+#socialMedia a#twitter {
+	background-image: url(../img/twitter.png);
+	}
+#socialMedia a#yelp {
+	background-image: url(../img/yelp.png);
+	}
+#socialMedia a#rss {
+	background-image: url(../img/rss.png);
+	}
+	
+/* == mainFooter 
+__________________________________________________*/ 
+#mainFooter {
+	margin: 0;
+	padding: 40px;
+	color: #ffffcc;
+	width: 100%;
+	height: 100%;
+	background-color: #330000;
+	float: left;
+	}
+#mainFooter nav {
+	width: 280px;
+	float: left;
+	margin-left: 20px;
+	border-right: 1px dashed #663300;
+	padding-bottom: 40px;
+	}
+
+#mainFooter nav a {
+	color: #ffffcc;
+	}
+footer h2 {
+	color: #ffffcc;
+}

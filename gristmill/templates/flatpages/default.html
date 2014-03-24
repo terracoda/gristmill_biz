@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block title %} {{ flatpage.title }} {% endblock %}
+
+
+{% block main_content %}
+ <h2>{{ flatpage.title }}</h2>
+	{{ flatpage.content|safe }}
+{% endblock %}
+
+{% block side_bar %} 
+	{% block sub_menu %} 
+	<nav class="submenu">		
+		{% for item in menuitems %}
+			{% if forloop.first %} 
+			<h3><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></h3>
+				<ul>
+		  	{% elif forloop.last %}
+		  			<li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+			   </ul>
+			{% else %}	    		   	  
+				    <li><a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a></li>
+			{% endif %}
+		{% endfor %}		
+	</nav>
+	{% endblock %}
+   
+   	{% block testimonial %}
+		{{ block.super }}
+	{% endblock %}
+	
+	{% block social_media %}
+		{{ block.super }}
+	{% endblock %}
+
+{% endblock %}

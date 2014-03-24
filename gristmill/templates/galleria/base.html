@@ -1,0 +1,37 @@
+{% extends "section_base.html" %}
+{% block theme_css %}
+<link rel="stylesheet" href="/static/css/gallery.css" />
+{% endblock %}
+ 
+{% block title %}Gristmill Photo Gallery {% endblock %}
+
+ 
+<h1>{% block page_heading %}Gristmill Gallery{% endblock %}</h1>	
+
+{% block side_bar %}
+   {% block sub_menu %}
+	<nav class="submenu">
+		{% if slug.slug == "all" %}
+			<h3><a class="current" title="Sort photos by tag" href="/gallery/all/">All images</a></h3>			
+		{% else %}
+			<h3><a title="All images" href="/gallery/all/">All images</a></h3>
+		{% endif %}
+		<ul> 
+	    {% for tag in tag_list %}
+	        {% if tag.slug == slug.slug %} 
+	        <li><a class="current" title="{{ tag.name }}" href="/gallery/{{ tag.slug }}/">{{ tag.name }}</a></li>
+		    {% else %} 
+	        <li><a title="Sort by {{ tag.name }}" href="/gallery/{{ tag.slug }}/">{{ tag.name }}</a></li>
+	     	{% endif %}
+	    {% endfor %}
+		</ul>
+	</nav>
+	{% endblock %}
+	
+	{% block social_media %}
+		{{ block.super }}
+	{% endblock %}
+	
+{% endblock%}	
+	
+	

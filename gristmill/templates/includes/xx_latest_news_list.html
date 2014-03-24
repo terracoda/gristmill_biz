@@ -1,0 +1,12 @@
+   <h2>Latest news</h2>
+    <ul>
+        {% for entry in entry_list %}
+            <li><h6>{{ entry.headline }} - <em class="date">{{ entry.pub_date }}</em></h6>
+				<p>{{ entry.body_text|truncatewords:5 }}</p>
+			</li>
+		{% empty %}
+			<p>Sorry, no news found!!!</p>
+        {% endfor %}
+			   <li><a href="/blog/daily-grist/">More news</a></li>
+
+    </ul>

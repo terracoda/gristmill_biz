@@ -1,0 +1,22 @@
+body {
+  background: url(../img/painting_bg.jpg) no-repeat left top scroll #330000 ;
+  color: #333;
+  font-size: 13px;
+  height: auto;
+}
+.block {
+  border: 1px dashed #666;
+  overflow: hidden;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.container_12 {
+  background-color: transparent;
+  background-repeat: repeat-y;
+  margin-bottom: 20px;
+}
+
+.container_12 {
+  background-image: url(../img/grid_bg.png);
+}

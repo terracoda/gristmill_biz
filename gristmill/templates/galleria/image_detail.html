@@ -1,0 +1,22 @@
+{% extends "galleria/base.html" %}
+
+{% block title %}{{ block.super }} | {{ image.caption|upper }}  {% endblock %}
+
+{% block main_content %}
+ 
+<h1>{{ image.caption }}</h1>
+			<img src="{{ image.get_img_url }}" title="{{ image.caption }}" alt="{{ image.caption }}"/>
+			<p class="description">{{ image.description }}</p>
+			
+			<p>All tags for this image: 
+				{% for tag in tag_list %}
+					{% if not forloop.last %}
+	            	<a title="{{ tag.name }}" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>, 
+	                {% else %}
+	                <a title="{{ tag.name }}" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>.
+	                {% endif %}
+	            {% endfor %}</p>
+	
+
+{% endblock %}
+
