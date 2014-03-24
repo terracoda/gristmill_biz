@@ -1,0 +1,18 @@
+<nav class="submenu">
+<h3>Sort photos by tag</h3>
+    <ul> 
+	{% if slug.slug == "all" %}
+		 <li><a class="current" title="All images" href="/gallery/all/">All images</a></li>
+	{% else %}
+	    <li><a title="All images" href="/gallery/all/">All images</a></li>
+	{% endif %}
+	
+    {% for tag in tag_list %}
+       {% if tag.slug == slug.slug %} 
+       <li><a class="current" title="{{ tag.name }}" href="/gallery/{{ tag.slug }}/">{{ tag.name }}</a></li>
+	   {% else %} 
+       <li><a title="Sort by {{ tag.name }}" href="/gallery/{{ tag.slug }}/">{{ tag.name }}</a></li>
+     {% endif %}
+   {% endfor %}
+    </ul>
+</nav>

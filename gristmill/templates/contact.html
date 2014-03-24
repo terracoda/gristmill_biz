@@ -1,0 +1,17 @@
+<form action="/contact/" method="post">
+    {% for field in form %}
+        <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }}: {{ field }}
+        </div>
+    {% endfor %}
+    <p><input type="submit" value="Send message" /></p>
+	
+	{% if form.subject.errors %}
+	    <ol>
+	    {% for error in form.subject.errors %}
+	        <li><strong>{{ error|escape }}</strong></li>
+	    {% endfor %}
+	    </ol>
+	{% endif %}
+</form>

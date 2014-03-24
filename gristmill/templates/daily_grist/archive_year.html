@@ -1,0 +1,16 @@
+{% extends 'section_base.html' %} 
+
+{% block title %}Daily Grist{% endblock %}
+	  
+{% block main_content %}
+<h2>The Daily Grist News Archive</h2>
+     <ul>
+	{% for entry in date_list %}
+
+	<li><h6><i style="font-size: 80%">{{ entry.pub_date }} </i><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h6></li>	 	 	 
+	{% endfor %}
+	</ul>
+{% endblock %}
+
+
+  	

@@ -1,0 +1,40 @@
+{% extends 'daily_grist/base.html' %}
+{% block title %}Daily Grist News{% endblock %}
+	  
+{% block main_content %}
+     <h1>{% block page_heading %}The Daily Grist News Blog{% endblock %}</h1>
+
+	{% block pagination_top %} {{ block.super }} {% endblock %}
+	
+    {% block page_content %}
+	<ul class="blogList">
+		{% for entry in entries %}
+			{% if forloop.first %}
+		   	<li><article class="first">
+			{% else %}
+			 <li><article>
+			 {% endif %}		     
+			<header>
+				<a href="{{ entry.get_absolute_url }}" title="{{ entry.title }}">
+				<em class="date">{{ entry.pub_date|date:"b d Y"|upper }}</em>				
+			 	<h2>{{ entry.title }}</h2>
+				<div class="clearfix"></div>
+				</a> 			  
+			 </header>
+    	       {% if entry.lead_image %}<p class="leadImage"><img src="{{ entry.lead_image.get_img_url }}" /></p> {% endif %}
+  
+		       {{ entry.body_html|safe|truncatewords:"50" }}
+				      	
+		    <footer>
+				<p>tags: {% for tag in entry.get_tags %}<a href="/daily-grist/tags/{{ tag.name|slugify }}/">{{ entry.tag.name }}</a>, {% endfor %}</p>	  		
+			</footer>
+		  </article></li> 	 	 
+		{% endfor %}
+	</ul>
+	{% endblock %}
+	
+	{% block pagination_bottom %} {{ block.super }} {% endblock %}
+	
+{% endblock %}
+  	
+

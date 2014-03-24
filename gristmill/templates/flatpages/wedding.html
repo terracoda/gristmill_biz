@@ -1,0 +1,10 @@
+{% extends "flatpages/default.html" %}
+{% load menubuilder %}
+
+{% block sub_menu %}
+	<!-- wedding cakes section submenu -->
+	{% menu wedding_cakes_section %}
+
+	{{ block.super }} 
+
+{% endblock %}

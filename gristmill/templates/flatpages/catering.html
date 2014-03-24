@@ -1,0 +1,10 @@
+{% extends "flatpages/default.html" %}
+{% load menubuilder %}
+
+{% block sub_menu %}
+	<!-- catering section submenu -->
+	{% menu catering_section %}
+
+	{{ block.super }} 
+
+{% endblock %}

@@ -1,0 +1,1318 @@
+/*
+Course Default Style Sheet
+Taliesin Smith
+Started in Fall 2009/Winter 2010
+Last Updated - Mar 16, 2011
+Last validated - Mar 16, 2011 
+Last uploaded to DMS - Mar 16, 2011
+Last uploaded to LMS - Mar 16, 2011
+
+The small icons used in the global theme are mostly from http://www.famfamfam.com/lab/icons/silk/
+
+*/
+body {
+	background-color: #fff;
+	color: #231f20; /* Almost black */
+	font-size: 1em;
+	line-height: 1.4;
+}
+html, body {
+	border:0;
+	margin:0;
+	padding:0;
+}
+body {
+	font-size: 1em;
+	line-height: 1.4;
+	/*font-family: Garamond, Georgia, "Times New Roman", times, serif;*/
+	font-family: arial, helvetica, "trebuchet ms", verdana, sans-serif;
+	color: #231f20; /*mun black*/
+}
+#footer	{
+	margin: 0 0 2em 0;
+}
+/* == Default Course Global Settings */
+/* == Headings */
+h1, h2, h3, h4, h5, h6, caption {
+	margin:1em 0 0.5em 0;
+	padding:0;
+	/*font-family: Garamond, Georgia, "Times New Roman", times, serif;*/
+	font-family: arial, helvetica, "trebuchet ms", verdana, sans-serif;
+	color: #231f20; /*mun black*/
+	line-height: 1.2;
+}
+h1 {
+	margin-top: 0.25em;
+	margin-bottom: 1.5em; /* will collapse when followed by an h2*/
+	padding: 0;
+	font-size: 2em;
+	color:#2a5f7b;  /*mun dark blue #3a6f8f is too light for regular text; */
+}
+/* Used  for small text above the fisrt h1 on a page*/
+h1 span, h1 a, h1 small {
+	display: block; 
+	font-size: 50%;
+}
+h1 span a, h1 small a {
+	display: inline;
+}
+h1 span a,
+h1 small a {
+	font-size: 100%;
+}
+h1 span,
+h1 small{
+	color: #9e918d; /*mun light grey */
+}
+h2 {
+	margin-top: 2em;
+	padding: 0;
+	font-size:1.6em;
+	font-weight: normal;
+}
+h3 {
+	margin: 2em 0 0 0;
+	padding:0;
+	color: #527a92; /*#7399b1 mun light blue is too light. darkened, but still too light for regualr sized text, but ok for large text.*/
+	font-size:1.4em;
+	line-height: 1em;
+	font-style: italic;
+}
+h4 {font-size: 1.2em;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+	color: #231f20;
+	font-weight: normal;
+	border-bottom: 1px solid #eee;
+	width: 80%;
+}
+
+/* See the Table Styles section for headings inside tables */
+h5, h6 {
+	font-size: 1em;
+	line-height: 1.2em;
+}
+h5 { color: #231f20;} /*mun black*/
+h6 { color: #65696e;} /*dark grey*/
+
+/* Divider class, use carefully, maybe you just need to customized a heading instead of using a class on a heading*/
+.divider {
+	color:#2a5f7b; /* colour passed AIM as large text, not as small text. */
+	background-color: #ece9e8; /*light grey*/
+	margin: 2em 0 0 0;
+	padding: 0.5em;
+	font-family: Garamond, Georgia, "Times New Roman", times, serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	clear: both;
+}
+
+/* == Common Formatting for Content */
+
+/* Remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+/* Remember to highlight inserts and deletes somehow! */
+ins {
+	color: #231f20;
+	text-decoration: none;
+	background-color:#ffd500;
+}
+del {
+	color: #231f20;
+	text-decoration: line-through;
+}
+code, tt, pre {
+	font-family: "Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New", monospace;
+}
+code, tt {
+	font-size: 0.8em;
+	font-style: normal;
+	letter-spacing: 0.10em;
+	padding: 0 0.25em 0 0.25em;
+	border-bottom: 4px double #dcd7d6;
+}
+pre {
+	font-size: 0.8em;
+	background-color: #eaf4f6;
+	margin: 1em auto 2em auto;
+	padding: 2em;
+	width: 75%;
+	overflow:scroll;
+}
+pre code {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border-bottom: none;
+}
+p, address, blockquote {
+	margin: 0.5em 0 1.5em 0;
+	padding: 0;
+}
+/* Browsers render the blockquote conisitently, but not the in-line quote. If you want quotes, you'll need to explicitly put them in the markup. However if your content is in a language other than English that may require special punctuation in speech, it might be a good idea to turn on automatic quotes and not inlcude them in the markup. Think about it.
+The multiple reset method here that turns quotes off in most if not all browsers is taken from http://www.paulchaplin.com/blog/css-reset-and-quirky-quotes */
+
+blockquote, q {
+	quotes: none;
+}
+blockquote cite {
+	text-align: right;
+}
+/*
+Safari doesn't support the quotes attribute, so we do this instead.
+*/
+blockquote:before, blockquote:after, q:before, q:after
+{
+	/*
+	CSS 2; used to remove quotes in case "none" fails below.
+	*/
+	content: "";
+	/*
+	CSS 2.1; will remove quotes if supported, and override the above.
+	User-agents that don't understand "none" should ignore it, and
+	keep the above value. This is here for future compatibility,
+	though I'm not 100% convinced that it's a good idea...
+	*/
+	content: none;
+}
+blockquote {
+	margin: 2em auto 3em;
+	padding: 0;
+	border-left: none;
+	background: transparent url(cssImg/quoteClose.gif) bottom right no-repeat;
+	width: 80%;
+}
+/*Always put your blockquoted text inside a paragraph(s) inside the blockquote*/
+blockquote p {
+	margin: 0;
+	padding: 1em 2em 0 2em;
+}
+blockquote p.first {
+	background: transparent url(cssImg/quoteOpen.gif) top left no-repeat;
+}
+cite {
+	font-style: italic;
+}
+/*References to blockquotes*/
+/*Used independently a b or cite inside a blockquote will display as block. They must be nested inside the last p of the blockquote to legal html.*/
+blockquote p b,
+blockquote p cite {
+	display: block;
+}
+/*All components should look the same individually or bundled.*/
+blockquote p b,
+blockquote p cite,
+/*Use the p.quoteRef to bundle a full reference with multiple components.*/
+blockquote p.quoteRef {
+	margin: 0;
+	padding: 0.25em 2em 0 0;
+	color: #999;
+	font-style: italic;
+	font-weight: normal;
+	text-align: right;
+}
+/*When bundled bold and cite display inline and no longer need padding.*/
+blockquote p.quoteRef cite, blockquote p.quoteRef b {
+	display: inline;
+	padding: 0;
+}
+/*Default margin and padding for all lists*/
+ul, ol, dl {
+	margin: 1em 0 1em 0;
+	padding: 0 0 0 0.5em;
+}
+ol {
+	padding-left: 2em;
+	list-style-type: decimal;
+}
+ul ul,
+ol ol {
+	margin: 0.5em 0 0.5em 0;
+	padding-left: 1em;
+}
+dl {
+	margin-top: 0;
+}
+ul, ol {
+	list-style-position: outside;
+}
+
+li {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+dt {
+	margin-top: 1em; /*note 0 margin on parent dl*/
+	font-weight: bold;
+}
+dd {
+	padding: 0 0 1em 1.5em; /*used padding to preserve extra space between the last dd and the next dt.*/
+}
+/*No bullets by default on un-ordered lists. We are using background images for bullets. */
+ul {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+/* Un-ordered lists*/
+/* Only ul li's should get the bullets. */
+ul li {
+	background: transparent  left 4px no-repeat;
+	background-image: url(cssImg/bullet_munblue.gif);
+	padding-left: 1.5em;
+}
+ul li li {
+	background-image: url(cssImg/bullet_munwine.gif);
+}
+ul li li li {
+	background-image: url(cssImg/bullet_munblack.gif);
+}
+ul li li li li{
+	background-image: url(cssImg/bullet_grey.gif);
+}
+ul li li li li li{
+	background-image: url(cssImg/bullet_star.png);
+}
+li ul {
+	background-image: none;
+}
+
+/* Ordered lists*/
+ol {
+	list-style-type:decimal;
+}
+ol ol{
+	list-style-type:lower-alpha;
+}
+ol ol ol{
+	list-style-type:lower-roman;
+}
+
+/* Classes for order lists - html attributes for list types are deprecated */
+ol.a {
+	list-style-type:lower-alpha;
+}
+ol.A {
+	list-style-type:upper-alpha;
+}
+ol.I {
+	list-style-type:upper-roman;
+}
+ol.i {
+	list-style-type:lower-roman;
+}
+
+/* Removes the li bullet image on li's when ol's with/without classes are nested inside a parent ul*/
+ul ol li, ol.a li, ol.A li, ol.I li, ol.i li {
+	background-image: none;
+	padding-left: 0;
+}
+.customCount {
+	margin-left: 0.5em;
+	padding-left: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+.customCount li {
+	margin-left: 0;
+	padding-left: 0;
+	background-image: none;
+}
+.customCount li span {
+	width: 2em; /* accomodates up to 3 digits. Increase width if your numbers have more digits.*/
+	display: block;
+	float: left;
+	color: #2a5f7b; /*change the color or use inherit*/
+	/*color: inherit;*/ /*uncomment if you want the numbers in the list to inherit color from their parent*/
+	font-weight: bold;
+	padding-right: 0.5em;
+	text-align: right;
+}
+.customCount h1 span,
+.customCount h2 span, 
+.customCount h3 span,
+.customCount h4 span,
+.customCount h5 span,
+.customCount h6 span {
+	color: inherit;
+	font-size: 1em;
+	font-style: inherit;
+	font-weight: inherit;
+	float: none;
+	margin-left: 0;
+	text-align: left;
+	display: inline;
+}
+.customCount h1,
+.customCount h2, 
+.customCount h3,
+.customCount h4,
+.customCount h5,
+.customCount h6 {
+	margin-bottom: 10px;
+}
+/*== Objectives and focus Lists*/
+ol.objectives, ul.objectives {
+	width: 80%;
+}
+.objectives li,
+li.unfocus {
+	margin-bottom: .25em;
+	color: #999999; /*grey*/
+	font-style: italic;
+}
+.objectives li.focus {
+	color: #231f20; /* Almost black */
+	font-style: normal;
+	font-weight: bold;
+}
+/*== Eval List*/
+/* The evalList class is handy for the evaluation list. Increase/decrease widths as needed to accommodate anchor text. */
+.evalList {
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	text-align:  right;
+	font-weight: normal;
+}
+.evalList li {
+	padding-left: 0;
+	background-image: none;
+}
+.evalList {
+	background-image: none;
+}
+.evalList a,
+.evalList em,
+.evalList i {
+	display: block;
+	float: left;
+	font-weight: bold;
+	text-align: left;
+}
+.evalList em,
+.evalList i {
+	color: #2a5f7b;
+	font-weight: bold;
+	font-style: normal;
+}
+.evalList strong,
+.evalList span {
+	color:  #231f20;
+	font-weight: bold;
+	padding-left: 3em;
+}
+li.total {
+	border-top: 1px #ece9e8 solid;
+	font-weight: bold;
+	background-image: none;
+	text-align: left;
+}
+li.total span {
+	float: right;
+}
+
+hr {
+	margin: 3em 0;
+	padding: 0;
+	border: none;
+	border-top: 1px solid #959697;
+	clear: both;
+}
+div.hr hr {
+	display: none;
+}
+
+div.hr {
+	clear: both;
+	margin: 0 auto;
+	padding: 3em 0;
+	background-image: url(cssImg/hr.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 1%; /* height needed for IE for the bg-image to show up */
+}
+small {
+	font-size:0.85em;
+}
+img {
+	border:0;
+	margin: 0;
+	padding: 0 0.5em;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+	font-weight: normal;
+}
+sup,
+sub {
+	font-size: 80%;	
+}
+sup a, sub a {
+	font-weight: bold;
+}
+sup {
+	position:relative;
+	bottom:0.5em;
+	vertical-align:baseline;
+}
+sub {
+	position:relative;
+	bottom:-0.5em;
+	vertical-align:baseline;
+}
+acronym, abbr {
+	cursor:text;
+	/*cursor:help;*/ /*This gives the question mark tool-tip.*/
+	letter-spacing:1px;
+	border-bottom:1px dotted #dcd7d6;
+}
+
+/* == Anchor Links */
+a,
+a:link,
+a:visited{
+	text-decoration: none;
+	color: #91002C; /*mun red*/
+	/*border-bottom: 1px solid #DEC4CC;*/
+}
+a:hover,
+a:focus,
+a:active{
+	 text-decoration: underline;
+	 color: #91002C;
+	 /*border-bottom: 1px dashed #91002C;*/
+	 outline: none;
+}
+
+/* == Form Controls */
+form {
+	margin:0;
+	padding:0;
+	display:inline;
+}
+input, select, textarea {
+	font:1em Arial, Helvetica, sans-serif;
+}
+textarea {
+	width:100%;
+	line-height:120%;
+}
+label {
+	cursor:pointer;
+}
+ 
+/* == Tables */
+/* For the white borders to work in IE the tables must NOT have 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate; /*needed for IE7 to show table's bg color creating the borders through the cell-spacing*/
+	border-spacing: 2px;
+	width: 99%;
+	border: 1px solid #ece9e8;
+	border-top: none;
+	margin-bottom: 2em;
+	background-color: #ffffff;
+}
+caption {
+	margin: 1em 0 0 0;
+	padding: 1em 0 1em 0;
+	font-size: 1em;
+	font-weight:bold;
+	border-top: 1px dashed #ece9e8;
+	border-right: none;
+	border-bottom: 1px solid #ece9e8;
+	border-left: none;
+	text-align: center;
+}
+caption.hide {
+	font-size: 0.1em;
+	height: 1px;
+	text-indent: -9999px;
+	border-top: none;
+}
+thead th, tfoot th  {
+	background-color: #2a5f7b;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	padding: 1em;
+}
+thead th {
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+tfoot th, tfoot td {
+	font-weight: normal;
+	font-style: italic;
+	text-align: center;
+	text-indent: 5px;
+}
+tbody {
+	border: 1px solid #2a5f7b;	
+}
+tbody th,
+td{
+	padding: 1em;
+	text-align: left;
+	background-color: #f8f8f8;
+}
+.alt td,
+tbody .alt th{
+	background-color: #ece9e8;
+}
+td {
+	padding:1em;
+	border: 0 solid #fff;
+}
+td p, td ul{
+	margin: 1em 0;
+	padding: 0;
+}
+td li {
+	margin-bottom: 0;
+}
+/*Headings inside tables are neutralized to all look the same. There are 2 sizes and 2 colors for headings inside tables.*/
+table h1, table h2, table h3{
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	margin-left: 0;
+	color: #2a5f7b; /*#231f20 mun black*/ /*#7399b1 medium*/ /*#2a5f7b h1 dark blue*/
+	font-size: 1.2em;
+	line-height: 1.4em;
+	font-weight: bold;
+	font-style: normal;
+}
+table h4, table h5, table h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: #231f20; /*#231f20 mun black*/ /*#7399b1 medium*/ /*blue #2a5f7b h1 dark blue*/
+	font-size: 1em;
+	line-height: 1.2em;
+	font-weight: bold;
+	font-style: normal;
+	text-indent: 0;
+	border-bottom: none;
+}
+ 
+/* == Global Classes */
+/* general image replacement */
+.replace,
+.hide {
+	text-indent: -9999px;
+	font-size: 1px;
+	/*do we need a line-height here?*/
+}
+/* Taliesin's handy in-line menu class */
+.pipeLine {
+	margin: 2em 0;
+	padding: 0;
+}
+.pipeLine li {
+	margin: 0;
+	padding: 0 0.5em 0 0.55em; /* padding bigger on li to compensate for border */
+	display: inline;
+	border-right: 1px solid;	
+	background-image: none;
+}
+.pipeLine a {
+	padding: 0;
+}
+.pipeLine li.last {
+	border-right: none;
+}
+
+/* == General Formatting classes */
+.content	{
+	border: 0;
+	margin-bottom: 40px;
+	padding: 0;
+	margin-left: 60px;
+	width: 80%;
+	}
+.copyright, .backToTop {
+	margin: 0 0 0 60px;
+	width: 80%;
+	font-size: 0.75em;
+	clear: both;
+}
+/* Don't further shrink the text if the div-tag and the a-tag both have the class backToTop */
+.backToTop .backToTop {
+	font-size: 1em;
+}
+.backToTop,
+div .backToTop {
+	margin-bottom: 1em;
+	text-align: right;
+}
+.copyright {
+	border-top: thin solid #993333;
+}
+.copyright p, 
+.courseTitle p {
+	margin: 0;
+	padding: 0;
+}
+.copyright em, 
+.courseTitle em {
+	font-weight: normal;
+}
+.courseTitle {
+	margin: 20px 0 0 60px;
+	padding: 0 0 5px;
+	width: 80%;
+	font-size: 0.75em;
+	border-bottom: thin solid #990000;
+}
+/* Add the emphasis class to an a em or a strong tag to get extra visual emphasis. */
+.emphasis {
+	font-weight: bold;
+	font-style: italic;
+	color: #2a5f7b;
+}
+.warn {
+	font-weight: bold;
+	color: #91002c; /*mun red*/
+}
+/* == Reference Lists*/
+.referenceList li,
+.refList li{
+	margin-left: 0;
+	padding-left: 2.5em;
+	text-indent: -2.5em;
+	background-image: none;
+}
+.referenceList span.eresource,
+.referenceList span.eResource,
+.refList span.eresource,
+.refList span.eResource {
+	display: block;
+	padding-left: 2.5em;
+}
+.referenceList .eresource .ereserve,
+.referenceList span.eresource a,
+.referenceList span.eResource a,
+.refList span.eresource a,
+.reffList span.eResource a{
+	display: inline;
+}
+
+/** == Multi-media styles */
+.mp3,
+.audioPlayer,
+.player,
+.videoPlayer {
+	margin: 1em;
+	padding: 0;
+}
+
+.mp3 a {
+display: block;
+float: left;
+padding: 0 0.5em 0 3.5em;
+margin: 0;
+text-decoration: none;
+background: #fff url(cssImg/podcastPixie-2.gif) left top no-repeat;
+}
+.mp3 a:hover {
+background: #fff url(cssImg/podcastPixie-2.gif) left -25px no-repeat;
+}
+.mp3 a:active {
+background: #fff url(cssImg/podcastPixie-2.gif) left -50px no-repeat;
+}
+
+/* == Column Styles */
+.colContainer, .block {
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	overflow: auto;
+	border-top: 1px dashed #72afb6;
+}
+.col {
+	margin: 0;
+	padding: 0 15px 0 0;
+	float: left;
+	border-left: 1px dashed #72afb6;
+}
+.block .col {
+	border-left: none;
+}
+.spanOne {
+	width: 20%;
+	margin: 0;
+	padding: 0 2% 0 3%;
+}
+.spanTwo {
+	width: 40%;
+	margin: 0;
+	padding: 0 2% 0 3%;
+}
+.spanThree {
+	width: 60%;
+	margin: 0;
+	padding: 0 2% 0 3%;
+}
+.spanFour {
+	width: 95%;
+	margin: 0;
+	padding: 0 2% 0 3%;
+}
+.spanOneThird {
+	width: 29%;
+	margin: 0;
+	padding: 0 2%;
+}
+.span50per {
+	width: 40%;
+	margin: 0;
+	padding: 0 5% 0 5%;
+}
+.colContainer .first {
+	border-left: none;
+	padding-left: 0;
+}
+
+/* Zeroed out whitespace on headings inside the colContainer */
+/* Customize you headings if you choose in your courseTheme. */
+.colContainer h2,
+.colContainer h3,
+.colcontainer h4,
+.colContainer h5,
+.colcontainer h6 {
+	margin: 0;
+	padding: 0.5em 0;
+}
+
+/** == Iconic Link classes */
+a.txt, a.doc, a.pdf, a.ppt, a.external, a.ereserve, a.external_pdf, a.flash, a.rtf, a.email, a.youtube, a.tv{
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	padding-right: 20px;
+}
+a.txt, a.rtf {background-image: url(cssImg/page_white_txt.png);}
+a.doc {background-image: url(cssImg/page_white_word.png);}
+a.pdf {background-image: url(cssImg/page_white_acrobat.png);}
+a.external_pdf {background-image: url(cssImg/page_white_acrobat_go.png);}
+a.external_pdf_v2 {background-image: url(cssImg/page_white_acrobat_go_v2.png);}
+a.ppt {background-image: url(cssImg/page_white_powerpoint.png);}
+a.flash {background-image: url(cssImg/page_white_flash.png);}
+a.external {background-image: url(cssImg/link_go.png);}
+a.ereserve {background-image: url(cssImg/book_go.png);}
+a.email {background-image: url(cssImg/email_link.png);}
+a.youtube, a.tv {background-image: url(cssImg/television.png);}
+
+/*ereserve links on resources page . You need a parent div with the id #resources or id resources on the body tag*/
+#resources li.ereserve {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px #ece9e8 solid;
+	width: 90%;
+}
+.eResource a,
+.eresource a {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+}
+li.ereserve, li.eresource {
+	background-image: none;
+	padding-top: 0;
+}
+li.ereserve a.ereserve,
+span.eresource a {
+	display: block;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	padding-left: 25px;
+	font-size: 80%;
+}
+/** == Contact list */
+ul.contact {
+	margin: 0.5em 0 3em 0;
+	padding: 0;
+}
+.contact li {
+	margin: 0 0 0.5em 0;
+	padding: 0 0 0 1.5em;
+	list-style-type: none;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+.contact li.office {background-image: url(cssImg/house.png);}
+.contact li.hours {background-image: url(cssImg/time.png);}
+.contact li.phone {background-image: url(cssImg/phone.png);}
+.contact li.fax {background-image: url(cssImg/script.png);}
+.contact li.email {background-image: url(cssImg/email.png);}
+.contact li.responseTime {background-image: url(cssImg/hourglass.png);}
+
+/** == Menu class */
+/*Puts the icons on the left, removes border and changes hover action.*/
+.menu {
+	margin: 0;
+	padding: 0;
+}
+.menu li {
+	padding-left: 0;
+	background-image: none;
+}
+.menu a {
+	padding-left: 24px;
+	padding-right: 0;
+	background: url(cssImg/arrow_right.png) no-repeat left top;
+	border: none;
+}
+.menu a:hover, .menu a:focus, .menu a:active {
+	padding-left: 44px;
+}
+ul.ereserve li a {
+	background: url(cssImg/book_go.png) no-repeat left top;}
+ul.flash li a {
+	background: url(cssImg/page_white_flash.png) no-repeat left top;}
+	
+/* == Footnote Styles*/
+sup a, sup a:link, sup a:visited {
+	font-weight: bold;
+	margin-left: .25em;
+}
+sup a:hover, sup a:focus, sup a:active {
+	font-weight: bold;
+	color: #2a5f7b;
+}
+.footNoteList,
+.footnoteList {
+	margin: 5em 0;
+	border: 1px solid #2a5f7b;
+	border-top: 3px solid #91002c;
+	padding: 0.5em 0 2em 0;	
+	font-size: 90%;
+}
+.foonoteList *,
+.footNoteList * {
+	font-size: 1em;
+}
+.footNoteList li,
+.footnoteList li  {
+	margin: 0;
+	padding: 0.5em 2em 1em;
+	background-image: none;
+	/*border-bottom: 1px dashed #72AFB6;*/
+}
+.footNoteList li.last,
+.footnoteList li.last {
+	border-bottom: none;
+}
+.footNoteList sup,
+.footnoteList sup {
+	color: #72afb6;
+	font-weight: bold;
+	padding-right: 0.5em;
+}
+
+/** = Copyrighted List */ 
+/*Used to list readings that are linked to a scanned pdf and require a credit line. Alternatively you can just put your creditlines in the pdf. Don't do both.*/
+ul.copyrighted {
+	list-style:none;
+	list-style-image:none;
+	width: 80%;	
+}
+.copyrighted li {
+	background-image: none;
+	border: 1px solid #ece9e8;
+	padding-left: 0;
+	text-indent: 0;
+}
+.copyrighted span {
+	display: block;
+	margin: 0;
+	padding: 5px;
+}
+.copyrighted .creditLine {
+	font-style: normal;
+	background-color: #eeeeee;
+	color: #000;
+	font-size: 80%;
+	line-height: 120%;
+}
+
+/** = Content Image Styles */
+
+/* Stretchable image with caption using a dl or a div */
+dl.img-withCaption,
+div.img-withCaption {
+	margin: 0;
+	padding: 0 20px 40px 0;
+	 /* No need to adjust width when the percentage width is used. Create an image the maximum size you want it to appear. A percentage width of 50% ensures the image will always be no bigger than 50% of the viewable content area. This means it will shrink with the size of the window/screen.*/
+	/*clear: both;*/
+	width: 50%;
+}
+dl.img-withCaption dt,
+dl.img-withCaption dd,
+.img-withCaption img,
+div.img-withCaption {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 500px;/* Set the max-width to the max widht of the large version of your images. The max-width prevents the image from stretching beyond it's real size and pixelating. If your images are different sizes, you might want make them all teh same size or to use a more customized solution. */
+}
+dl.img-withCaption dd,
+dl.img-withCaption img {	
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border:1px solid #eee;
+}
+.img-withCaption dd,
+.img-wrapperWithCaption dd,
+.img-withCaption span,
+.img-withCaption p,
+.img-wrapperWithCaption p,
+.img-wrapperWithCaption span {
+	margin: 0;
+	padding: 4px;
+	display: block;
+	font-size: 1em;
+	color: #65696e; /*#65696e*/ /*too light #999999*/
+	font-style: italic;
+	text-align: center;
+	clear: both;
+}
+.caption {
+	color: #65696e;
+	font-style: italic;
+	text-align: center;
+}
+
+/* The credit line does not accomodate long url's in in the body of the creditLine span in IE. Chop and/or put long urls in the title attribute or use linked text. */
+.img-withCaption span.creditLine,
+.img-withCaption p.creditLine,
+.img-wrapperWithCaption p.creditLine,
+.img-wrapperWithCaption span.creditLine{
+	margin: 4px;
+	padding: 4px;
+	font-style: normal;
+	font-size: 80%;
+	background-color: #eeeeee;
+	color: #000;
+	text-align: left;
+}
+.img-withCaption .creditLine a,
+.img-wrapperWithCaption .creditLine a {
+	font-size: 100%; /*which is 80% of normal inherited from parent*/
+}
+dl.floatRight {
+	padding-left: 20px;
+}
+div.img-withCaption {
+	border:1px solid #ece9e8;
+	margin: 20px;
+	padding: 0;
+}
+div.img-withCaption img{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/*Display block needed for IE7. Without these rules the dt and dd were spilling out of the dl which has a fixed-width set. Needs further testing and investigation.*/
+.img-withCaption dt,
+.img-withCaption dd {
+	/*display: block;*/
+}
+
+/*Image with a drop shadow (no cpation and non-stretchable)*/
+.img-wrapper{
+	background: url(cssImg/shadow.gif) no-repeat bottom right;
+	background-color: transparent;
+	clear: right;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.img-wrapper img {
+	margin: 0 8px 3px 0;
+	padding: 10px 12px 12px 10px;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+}
+
+/*Image with a drop shadow (and a caption)*/
+.img-wrapperWithCaption {
+	/*float: left;*/
+	margin: 20px;
+	margin-left: 0;
+}
+.img-wrapperWithCaption .img-wrapper{
+	clear: right;
+	float: left;
+	margin: 0;
+	padding: 10px 20px 10px 10px;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+}
+.img-wrapperWithCaption .img-wrapper img {
+	margin: 0 0 0 0;
+	padding: 0 0 10px 0;
+	border: none;
+}
+.img-wrapperWithCaption p.creditLine,
+.img-wrapperWithCaption span.creditLine,
+.img-wrapperWithCaption p.caption,
+.img-wrapperWithCaption span.caption {
+	margin: 0 10% 0 10%;
+	text-align: center;
+}
+
+/*== Boxes */
+/* The note, keynote and iconNote boxes */
+.note,
+.keynote,
+.iconNote {
+	margin: 3em 0 3em 0; /* The zero left and right margins left-algin the box. */
+	/*margin: 1em 10% 2em 10%;*/ /* The even left and right margins center the box a little bit. */
+	padding: 20px 40px;
+	background-color: #ece9e8; /* lighter version of mun light grey. Passes AIM test with red links*/
+	font-weight: normal;
+	border: 1px solid #316f8f;
+	border-top: 3px solid #91002c;
+}
+.keynote {
+	border: 1px solid #7399b1;
+	border-top: 3px solid #2a5f7b;
+}
+li .note,
+li .keynote,
+li .iconNote {
+	margin-bottom: 1em;
+}
+.note h2, .keynote h2, .iconNote h2,
+.note h3, .keynote h3, .iconNote h3,
+.note h4, .keynote h4, .iconNote h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 0;
+	padding-top: 0.5em;
+	margin-bottom: 0;
+}
+.note h4, .keynote h4, .iconNote h4 {
+	text-indent: 0;
+	border-bottom: none;
+}
+/* Adding icons to a note box*/
+.iconNote {
+	background-position: 0.5em 0.5em;
+	background-repeat: no-repeat;
+	min-height: 120px; /*needed to clear the icon*/
+}
+.ePortfolio {
+	background-image: url(cssImg/delt_eP.png);
+}
+.synchSession {
+	background-image: url(cssImg/delt_headset.png);
+}
+.discuss {
+	background-image: url(cssImg/delt_discuss.png);
+}
+.iconNote *{
+	margin-left: 80px; 
+}
+.iconNote * *{
+	margin-left: 0; 
+}
+/* If you want to hide the h2 headings in your icon boxes uncomment*/
+/*.iconNote h2{
+	maring: 0;
+	padding: 0;
+	text-indent: -99999px; 
+	font-size: 1px;
+}*/
+
+/*Subeadings are all black when inside a note box*/
+.note h3, .note h4, .note h5, .note h6, 
+.keynote h3, .keynote h4, .keynote h5, .keynote h6,
+.iconNote h3, .iconNote h4, .iconNote h5, .iconNote h6 {
+	color: #231f20;
+}
+
+/** = Rounded corner boxes. Add a colour by using the class colour names. */
+.box {
+	max-width: 800px;
+	width: 80%;
+	background: #ece9e8 url(cssImg/rc_bgWhite.png) no-repeat left bottom; /*bg colour passes AIM test. #c8c8c8 was too dark for red links*/
+	margin: 2em 10%;
+}
+.box-outer{
+	background: url(cssImg/rc_bgWhite.png) no-repeat right bottom;
+	padding-bottom: 1em;
+}
+.box-inner{
+	background: url(cssImg/rc_bgWhite.png) no-repeat left top;
+}
+/*The h2 gets the 4th corner of the box, so don't change the top margin and paddings of h2's here.*/
+.box h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 1.5em;
+	font-size: 1.2em;
+	font-weight: bold;	
+	background: url(cssImg/rc_bgWhite.png) no-repeat right top;
+}
+
+/*Set the left and right spacing for elements inside the box*/
+.box h2,
+.box p,
+.box h3,
+.box h4,
+.box h5,
+.box h6 {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+/* Subheadings are all black when inside an RC box */
+.box h3, .box h4, .box h5, .box h6 {
+	color: #000000;
+}
+.box h4 {
+	text-indent: 0;
+	border-bottom: none;
+}
+.box ul,
+.box ol {
+	margin: 0;
+	padding-left: 8%;
+	padding-right: 5%;
+}
+.box ul ul {
+	padding-left: 1em;
+}
+.box ol ol {
+	padding-left: 2em;
+}
+.box ol {
+	list-style-position: inside;
+}
+.box a, .box a:link, .box a:visited, .box a:hover, .box a:focus, .box a:active  {
+	color: #231f20; /*mun black*/
+	text-decoration: underline;
+}
+.box a:hover, .box a:focus, .box a:active{
+	color: #91002c; /*mun red*/
+	background-color: #ffffff;
+	text-decoration: none;
+}
+/* Adjustments for blue */
+.blue{
+	color: #ffffff;
+	background-color: #2a5f7b; /*passed AIM test with white text*/
+}
+/*Headings are all white when inside the darkBlue box*/
+.blue h2,  .blue h3, .blue h4, .blue h5, .blue h6 {
+	color: #ffffff;
+}
+.blue a, .blue a:link, .blue a:visited, .blue a:hover, .blue a:focus, .blue a:active  {
+	color: #ffffff;
+}
+.box a:hover, .box a:focus, .box a:active{
+	color: #91002c; /*mun red*/
+}
+/*Adjustmets for lightBlue and green*/
+.lightBlue {
+	background-color: #8cacbf;  /* #7399b1 too dark according to AIM*/
+}
+.green {
+	background-color: #b5bda5; /*#8a9772 too dark according to AIM*/
+}
+/*Text is all black when inside the lightBlue and green boxes*/
+.lightBlue *, .green * {
+	color: #000000;
+}
+/*Un-order list bullets are all white inside the blue box*/
+.blue ul li {
+	background: transparent  left 4px no-repeat;
+	background-image: url(cssImg/bullet_white.png);
+	padding-left: 1.5em;
+}
+.blue ul li li {
+	background-image: url(cssImg/bullet_white.png);
+}
+.blue ul li li li {
+	background-image: url(cssImg/bullet_white.png);
+}
+.blue ul li li li li{
+	background-image: url(cssImg/bullet_white.png);
+}
+.blue ul li li li li li{
+	background-image: url(cssImg/bullet_white.png);
+}
+.blue li ul {
+	background-image: none;
+}
+/** == Thoughtbox */
+/* Turn a box into a thought cloud box by wrapping the box in a div with the thoughtBox. */
+.thoughtBox {
+	max-width: 800px;
+	width: 80%;
+	padding-bottom: 75px; /*for the bubbles*/
+	background: url(cssImg/thoughtBubbleStem.jpg) no-repeat right bottom;
+	margin: 0 10% 1.5em 10%;
+}
+.thoughtBox .box {
+	width: 100%;
+	margin: 0;
+}
+/* Always make sure the h2 in a box has no top margin, or the rounded corners break. */
+.box h2 {
+	margin-top: 0;
+}
+
+/** == General foramtting classes usually used to for little changes need when marking up content */
+.clear, 
+.clearBoth		{ clear: both; }
+.floatLeft		{ float: left; }
+.floatRight 	{ float: right; }
+.floatNone		{ float: none; }
+
+.imgLeft		{ float:left; margin: 0 1em 1em 0; padding-left: 0; }
+.imgRight		{ float:right; margin: 0 0 1em 1em; padding-right: 0; }
+
+.textLeft		{ text-align: left; }
+.textRight		{ text-align: right; }
+.textCenter		{ text-align: center; }
+.textJustify	{ text-align: justify; }
+.textIndent		{ padding-left: 40px;}
+.textUpperCase	{text-transform: uppercase;}
+ 
+.bold          { font-weight: bold; }
+.italic        { font-style: italic; }
+.underline     { border-bottom: 1px solid; }
+.highlight,
+.hilight		{ background: #FFD500; }
+ 
+.nopadding		{ padding: 0; }
+.noindent		{ margin-left: 0; padding-left: 0; }
+.noindent li	{ padding-left: 0; }
+
+ol.nobullet,
+ul.nobullet,
+.nobullet ul,
+.nobullet ol	{ list-style:none; list-style-image:none; }
+
+ol.nobullet,
+ul.nobullet		{ margin:0; padding-left: 0; }
+
+.nobullet li, 
+.nobullet li li { background: none; padding: inherit;}
+
+.plain			{ margin: 0; padding: 0; list-style: none; list-style-image: none; }
+.plain li		{ margin: 0; padding: 0 0 5px 0; }
+.small			{ font-size: 80%;}
+.source			{ font-weight: normal;}
